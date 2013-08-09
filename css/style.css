@@ -1,0 +1,18 @@
+body {
+	margin: 0px;
+}
+
+.equation-container {
+	background-color: rgb(255, 251, 224);
+	padding: 15px;
+	width: 100%;
+}
+
+.equation-container h3 {
+	font-family: 'Roboto Slab', Georgia, serif;
+	margin: 0 0 1em;
+}
+
+#calculateButton {
+	margin: 10px 0;
+}
