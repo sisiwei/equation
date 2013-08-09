@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>Equation!</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/calculator.js"></script>
+</head>
+<body>
+    <input id="equationInput" type="text" placeholder="Enter equation" />
+    <button id="generateButton">Make calculator</button>
+    <div id="calculatorPreview"></div>
+    <pre id="calculatorSource"></pre>
+
+<!-- 
+    Expects to get passed a list of variables 
+    and an equation
+    Like {variables: [x,y,abc_var], equation: "x+y*z"}
+-->
+<script type="text/x-handlebars-template" id="calculatorTemplate">
+    <!-- Drop the code below into the body of your html -->
+    <h3> YOUR TITLE HERE </h3>
+    <div class="calculator">
+        {{#each variables}}
+            <div class="variableInputWrapper">
+                <label>{{this}}:</label> 
+                <input type="text" placeholder="0" class="variableInput" id="variableInput-{{this}}" />
+            </div>
+        {{/each}}
+        <button id="calculateButton">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script type="text/javascript">
+        function calculate(){
+            {{#each variables}}
+            var {{this}} = +$('#variableInput-{{this}}').val() || 0;
+            {{/each}}
+            $('#result').text({{equation}});
+        }
+        $('#calculateButton').click(calculate);
+        $('.variableInput').keyup(calculate);
+</script>
+</body>
+</html>
