@@ -4,7 +4,7 @@ body {
 }
 
 html {
-	background-color: #290007;
+	background-image: url('../images/simple_dashed.png')
 }
 
 h1 {
@@ -13,6 +13,12 @@ h1 {
 	font-size: 3.5em;
 	text-align: center;
 	margin: 1em 0 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 h2 {
@@ -22,11 +28,55 @@ h2 {
 	font-size: 1em;
 	text-align: center;
 }
+
 hr {
 	border-bottom: 1px solid rgba(139, 139, 139, 0.5);
 	border-top: 1px solid rgba(32, 7, 7, 0.08);
+	border-left: none;
 }
 
 .main-container {
 	margin: 20px 0 10px;
+}
+
+.row {
+	color: #C99800;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 15px 0;
+}
+
+.row .left {
+	width: 48%;
+	float: left;
+}
+
+.row .right {
+	width: 48%;
+	margin-left: 4%;
+	float: left;
+	padding: 20px 0 10px;
+}
+
+pre {
+	background-color: rgb(37, 37, 37);
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }
