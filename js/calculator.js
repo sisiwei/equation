@@ -4,18 +4,18 @@ $(document).ready(function(){
     function standardize(equation){
         
         // Limit allowable characters
-        // Allow alphanumeric, +, -, /, *, ()
+        // Allow alphanumeric, +, -, /, *, ., ()
         // No spaces
-        equation = equation.replace(/[^a-zA-Z0-9_+\-*\/()]/g, '');
+        equation = equation.replace(/[^a-zA-Z0-9._+\-*\/()]/g, '');
 
         // Add explicit multiplication operators
         // For parens, as in (a)(b) or 2(5+x)
-        equation = equation.replace(/([A-Za-z0-9_)])\(/g, '$1*\(');
-        equation = equation.replace(/\)([(A-Za-z0-9_])/g, '\)*$1');
+        equation = equation.replace(/([A-Za-z0-9._)])\(/g, '$1*\(');
+        equation = equation.replace(/\)([(A-Za-z0-9._])/g, '\)*$1');
 
         // And add them for cases like 2x (but not v4riable_name)
         
-        equation = equation.replace(/(^|[^A-Za-z0-9_])([0-9]+)([A-Za-z_])/g, '$1$2*$3');
+        equation = equation.replace(/(^|[^A-Za-z0-9._])([0-9.]+)([A-Za-z_])/g, '$1$2*$3');
 
         return equation;
     }
