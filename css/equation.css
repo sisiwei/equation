@@ -1,18 +1,41 @@
-/*body {
+body {
 	margin: 0px;
-}*/
+	background: rgb(20, 20, 20);
+}
+
+#calculator-preview {
+	margin: 20px 0 0 0;
+}
 
 #calculator-preview .equation-container {
 	background-color: rgb(255, 251, 224);
 	padding: 15px;
-	width: 100%;
+	width: 380px;
+	margin: 0 auto;
+	border-top: 3px solid rgb(97, 97, 97);
 }
 
 #calculator-preview .equation-container h3 {
 	font-family: 'Roboto Slab', Georgia, serif;
-	margin: 0 0 1em;
+	margin: 0 0 0.5em;
+	font-size: 1.3em;
+	line-height: 1.2em;
+}
+
+#calculator-preview .equation-container .guff {
+	margin-top: 0px;
 }
 
 #calculator-preview #calculateButton {
 	margin: 10px 0;
+}
+
+#calculator-preview label {
+	font-weight: bold;
+	margin: 10px 0 4px;
+	display: block;
+}
+
+#calculator-preview .variable-input {
+	width: 99%;
 }

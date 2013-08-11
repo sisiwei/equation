@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>equation</h1>
-    <h2>Automatically generate your own calculator.</h2>
+    <h2 class="tagline">Automatically generate your own calculator.</h2>
     <hr/>
     <div class="main-container">
         <div class="row cf">
@@ -47,7 +47,12 @@
             <button id="generateButton">Make calculator</button>
         </div>
         
+        <hr/>
+
+        <h2>Preview</h2>
         <div id="calculator-preview"></div>
+
+        <h2>Code</h2>
         <textarea id="calculatorSource"></textarea>
     </div>
     <hr/>
@@ -72,7 +77,7 @@
                 {{#each variables}}
                     <div class="variableInputWrapper">
                         <label>{{this}}:</label> 
-                        <input type="text" placeholder="0" class="variableInput" id="variableInput-{{this}}" />
+                        <input type="text" placeholder="0" class="variable-input" id="variable-input-{{this}}" />
                     </div>
                 {{/each}}
                 <button id="calculateButton">Calculate</button>
@@ -82,11 +87,11 @@
             <script type="text/javascript">
                 function calculate(){
                     {{#each variables}}
-                    var {{this}} = +$('#variableInput-{{this}}').val() || 0;
+                    var {{this}} = +$('#variable-input-{{this}}').val() || 0;
                     {{/each}}
                     $('#result').text({{equation}});
                 }
                 $('#calculateButton').click(calculate);
-                $('.variableInput').keyup(calculate);
+                $('.variable-input').keyup(calculate);
         </script>
 </html>

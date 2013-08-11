@@ -28,9 +28,14 @@ h1 {
 h2 {
 	color: #C99800;
 	font-family: "Roboto Slab", serif;
-	font-weight: 300;
+	font-weight: 500;
 	font-size: 1em;
 	text-align: center;
+}
+
+h2.tagline {
+	font-size: 1em;
+	font-weight: 300;
 }
 
 hr {
@@ -89,10 +94,11 @@ textarea {
 	width: 230px;
 }
 
-#calculatorPreview {
-	width: 300px;
-	margin: 0 auto;
+#calculator-preview {
+	width: 380px;
+	margin: 20px auto;
 	background-color: white;
+	padding: 10px;
 }
 
 footer {
