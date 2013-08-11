@@ -16,7 +16,7 @@ h1 {
 	font-family: "Roboto Slab", serif;
 	font-size: 3.5em;
 	text-align: center;
-	margin: 1em 0 0;
+	margin: 0.5em 0 0;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -37,16 +37,14 @@ hr {
 	border-bottom: 1px solid rgba(139, 139, 139, 0.5);
 	border-top: 1px solid rgba(32, 7, 7, 0.08);
 	border-left: none;
+	margin: 30px 0;
 }
 
-.main-container {
-	margin: 20px 0 10px;
-}
+.main-container { }
 
 .row {
 	color: #C99800;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	margin: 15px 0;
 }
 
 .row .left {
@@ -79,6 +77,18 @@ textarea {
 	border-color: black;
 }
 
+.maker {
+	width: 400px;
+	margin: 0 auto;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 0.9em;
+	color: #C99800;
+}
+
+#equationInput {
+	width: 230px;
+}
+
 #calculatorPreview {
 	width: 300px;
 	margin: 0 auto;
@@ -107,8 +117,4 @@ footer {
  */
 .cf {
     *zoom: 1;
-}
-#resultLabel {
-    color: white;
-
 }
