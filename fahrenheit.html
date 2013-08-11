@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>Equation!</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+	<!-- Sample to be usable, when embedded directly -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/equation.css" />
+	<div class="equation-container">
+		<h3>Convert Celsius to Fahrenheit</h3>
+		<p class="guff">Sample guff text explaining the calculator. Optional.</p>
+        <div class="calculator">
+                
+                    <div class="variableInputWrapper">
+                        <label>fahrenheit:</label> 
+                        <input type="text" placeholder="0" class="variableInput" id="variableInput-fahrenheit" />
+                    </div>
+                
+                <button id="calculateButton">Calculate</button>
+                <div id="result"></div>
+        </div>
+
+        <script type="text/javascript">
+            function calculate(){
+                
+                var fahrenheit = +$('#variableInput-fahrenheit').val() || 0;
+                
+                $('#result').text((fahrenheit-32)/1.8);
+            }
+            $('#calculateButton').click(calculate);
+            $('.variableInput').keyup(calculate);
+        </script>
+
+
+
+	</div>
+	
+
+</body>
+</html>
