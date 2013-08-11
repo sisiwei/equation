@@ -7,6 +7,10 @@ html {
 	background-image: url('../images/simple_dashed.png')
 }
 
+a, a:visited, a:hover {
+	color: white;
+}
+
 h1 {
 	color: #FFFFFF;
 	font-family: "Roboto Slab", serif;
@@ -61,6 +65,29 @@ pre {
 	background-color: rgb(37, 37, 37);
 	padding: 10px;
 	border-radius: 3px;
+}
+
+textarea {
+	height: 300px;
+	width: 100%;
+	max-width: 100%;
+	background-color: rgb(37, 37, 37);
+	color: #C99800;
+	display: none;
+	border-radius: 5px;
+	border-color: black;
+}
+
+#calculatorPreview {
+	width: 300px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+footer {
+	margin: 10px 0 1em;
+	padding: 10px 0;
+	font-size: 0.8em;
 }
 
 .cf:before,

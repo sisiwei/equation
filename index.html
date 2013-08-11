@@ -32,12 +32,16 @@
             <div class="right">Add as many variables as you need.</div>
         </div>
 
-
-
         <input id="equationInput" type="text" placeholder="Enter equation" />
-            <button id="generateButton">Make calculator</button>
-            <div id="calculatorPreview"></div>
-            <pre id="calculatorSource"></pre>
+        <button id="generateButton">Make calculator</button>
+        <div id="calculator-preview"></div>
+        <textarea id="calculatorSource"></textarea>
+    </div>
+    <hr/>
+    <footer>
+        <h2>Created by <a href="https://twitter.com/smelendez">Steven Melendez</a> & <a href="https://twitter.com/sisiwei">Sisi Wei</a>, presented at <a href="http://aaja2013.sched.org/event/35b97055c0f795ed04884c4abd94f354?iframe=no#.UgfoYWTTUTg">AAJA 2013</a>. More features pending.</h2>
+    </footer>
+</body>
 
         <!-- 
             Expects to get passed a list of variables 
@@ -46,7 +50,7 @@
         -->
         <script type="text/x-handlebars-template" id="calculatorTemplate">
             <!-- Drop the code below into the body of your html -->
-            <!--
+            <!-- 
                 Include the next line (without comments) if you don't already include jQuery on your page
                 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
             -->
@@ -73,6 +77,4 @@
                 $('#calculateButton').click(calculate);
                 $('.variableInput').keyup(calculate);
         </script>
-    </div>
-</body>
 </html>

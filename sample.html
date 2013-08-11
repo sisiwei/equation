@@ -5,26 +5,27 @@
 </head>
 <body>
 
-	<!-- Sample to be usable, when embedded directly -->
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/equation.css" />
-	<div class="equation-container">
-		<h3>Are you part of the 99%?</h3>
-		<p class="guff">Sample guff text explaining the calculator. Optional.</p>
-		<div class="calculator">
-		        <div class="variableInputWrapper">
-		            <label>Example:</label> 
-		            <input type="text" placeholder="0" class="variableInput" id="variableInput-{{this}}" />
-		        </div>
-		    <button id="calculateButton">Calculate</button>
-		    <div id="result"></div>
+	<div id="calculator-preview">
+		<!-- Sample to be usable, when embedded directly -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/equation.css" />
+		<div class="equation-container">
+			<h3>Are you part of the 99%?</h3>
+			<p class="guff">Sample guff text explaining the calculator. Optional.</p>
+			<div class="calculator">
+			        <div class="variableInputWrapper">
+			            <label>Example:</label> 
+			            <input type="text" placeholder="0" class="variableInput" id="variableInput-{{this}}" />
+			        </div>
+			    <button id="calculateButton">Calculate</button>
+			    <div id="result"></div>
+			</div>
+			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		    <script type="text/javascript" src="js/handlebars.js"></script>
+		    <script type="text/javascript" src="js/underscore-min.js"></script>
+		    <script type="text/javascript" src="js/calculator.js"></script>
 		</div>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	    <script type="text/javascript" src="js/handlebars.js"></script>
-	    <script type="text/javascript" src="js/underscore-min.js"></script>
-	    <script type="text/javascript" src="js/calculator.js"></script>
 	</div>
-	
 
 </body>
 </html>

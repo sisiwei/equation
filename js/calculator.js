@@ -50,7 +50,7 @@ $(document).ready(function(){
         // Generate an example calculator
 
         try {
-            $('#calculatorPreview').html(calculatorSource);
+            $('#calculator-preview').html(calculatorSource);
             // And source to copy-paste
             $('#calculatorSource').text(calculatorSource);
         }
@@ -60,9 +60,11 @@ $(document).ready(function(){
             // operators, etc.
             
             $('#calculatorSource').text("");
-            $('#calculatorPreview').text("Invalid equation. <sad face>");
+            $('#calculator-preview').text("Invalid equation. <sad face>");
 
         }
+
+        $('#calculatorSource').fadeIn(500);
 
     }
     $('#generateButton').click(generate);
