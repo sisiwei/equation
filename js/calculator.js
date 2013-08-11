@@ -36,10 +36,22 @@ $(document).ready(function(){
         // Update the input
         $('#equationInput').val(equation);
         var variables = getVariables(equation);
+        var round = $('#roundCheck').prop('checked');
+        var roundPlaces;
+
+        if (round)
+        {
+            roundPlaces = +($('#roundPlaces').val());
+        }
+            
+
+        
 
         var calculatorSource = calculatorTemplate({
             variables: variables,
-            equation: equation
+            equation: equation,
+            round: round,
+            roundPlaces : roundPlaces
         
         });
 

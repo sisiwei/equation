@@ -44,6 +44,8 @@
         <h2>Try it yourself.</h2>
         <div class="maker">
             <label id="resultLabel">result =</label> <input id="equationInput" type="text" placeholder="Enter equation" />
+            <br />
+            <input type="checkbox" id="roundCheck" checked /> Round result to nearest <input type="text" value="2" id="roundPlaces" /> decimal places?
             <button id="generateButton">Make calculator</button>
         </div>
         
@@ -89,7 +91,12 @@
                     {{#each variables}}
                     var {{this}} = +$('#variable-input-{{this}}').val() || 0;
                     {{/each}}
-                    $('#result').text({{equation}});
+                    var result = {{equation}};
+                    {{#if round}}
+                    result = result.toFixed({{roundPlaces}});
+                    {{/if}}
+
+                    $('#result').text(result);
                 }
                 $('#calculateButton').click(calculate);
                 $('.variable-input').keyup(calculate);
