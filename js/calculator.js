@@ -76,7 +76,7 @@ $(document).ready(function(){
 
         }
 
-        $('#calculatorSource').fadeIn(500);
+        $('.reveal').fadeIn(500);
 
     }
     $('#generateButton').click(generate);
