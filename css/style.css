@@ -80,3 +80,7 @@ pre {
 .cf {
     *zoom: 1;
 }
+#resultLabel {
+    color: white;
+
+}
