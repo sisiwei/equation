@@ -30,12 +30,17 @@ h2 {
 	font-family: "Roboto Slab", serif;
 	font-weight: 500;
 	font-size: 1em;
-	text-align: center;
 }
 
 h2.tagline {
 	font-size: 1em;
 	font-weight: 300;
+	text-align: center;
+}
+
+h2.try {
+	font-size: 2em;
+	text-align: center;
 }
 
 hr {
@@ -65,6 +70,8 @@ hr {
 	font-size: 0.9em;
 }
 
+.reveal { display: none; }
+
 pre {
 	background-color: rgb(37, 37, 37);
 	padding: 10px;
@@ -77,33 +84,34 @@ textarea {
 	max-width: 100%;
 	background-color: rgb(37, 37, 37);
 	color: #C99800;
-	display: none;
 	border-radius: 5px;
 	border-color: black;
 }
 
 .maker {
 	width: 400px;
-	margin: 0 auto;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 0.9em;
 	color: #C99800;
+	margin: 0 auto;
 }
 
 #equationInput {
 	width: 230px;
 }
 
-/*#calculator-preview {
-	width: 380px;
-	margin: 20px auto;
-	background-color: white;
-	padding: 10px;
-}*/
+#calculator-preview {
+	background-color: rgb(37, 37, 37);
+}
 
 footer {
 	margin: 10px 0 1em;
 	padding: 10px 0;
+}
+
+
+footer h2 {
+	text-align: center;
 	font-size: 0.8em;
 }
 
