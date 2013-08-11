@@ -96,8 +96,17 @@ textarea {
 	margin: 0 auto;
 }
 
+.rounding {
+	margin: 5px 0 5px 48px;
+	font-size: 0.9em;
+}
+
+.rounding input {
+	margin-left: 4px;
+}
+
 #equationInput {
-	width: 230px;
+	width: 233px;
 }
 
 #calculator-preview {
