@@ -79,7 +79,7 @@ pre {
 }
 
 textarea {
-	height: 450px;
+	height: 500px;
 	width: 100%;
 	max-width: 100%;
 	background-color: rgb(37, 37, 37);
@@ -89,11 +89,18 @@ textarea {
 }
 
 .maker {
-	width: 400px;
+	width: 420px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 0.9em;
 	color: #C99800;
 	margin: 0 auto;
+}
+
+.error {
+	width: 15px;
+	position: relative;
+	top: 3px;
+	display: none;
 }
 
 .rounding {

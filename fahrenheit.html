@@ -16,22 +16,23 @@
     		<h3>Convert Fahrenheit to Celsius</h3>
     		<p class="guff">Convert degrees from Fahrenheit to Celsius. An example calculator for equation.</p>
             <div class="calculator">
-                <div class="variableInputWrapper">
+                <div class="var-input-wrapper">
                     <label>Degrees Fahrenheit</label>
                     <input type="text" placeholder="0" class="variable-input" id="variable-input-fahrenheit" />
                 </div>
-                <button id="calculateButton">Calculate</button>
-                <div>Degrees Celsius:<span id="result"></span></div>
+                <div class="calc-results cf">
+                    <button id="calculate-button">Calculate</button>
+                    <div class="result-label">Degrees Celsius: <span id="result"></span></div>
+                </div>
             </div>
 
             <script type="text/javascript">
                 function calculate(){
-                    
                     var fahrenheit = +$('#variable-input-fahrenheit').val() || 0;
-                    
-                    $('#result').text((fahrenheit-32)/1.8);
+                    $('#result').text(((fahrenheit-32)/1.8).toFixed(1));
+                    $('.result-label').fadeIn();
                 }
-                $('#calculateButton').click(calculate);
+                $('#calculate-button').click(calculate);
                 $('.variable-input').keyup(calculate);
             </script>
     	</div>

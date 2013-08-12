@@ -44,9 +44,6 @@ $(document).ready(function(){
             roundPlaces = +($('#roundPlaces').val());
         }
             
-
-        
-
         var calculatorSource = calculatorTemplate({
             variables: variables,
             equation: equation,
@@ -65,18 +62,17 @@ $(document).ready(function(){
             $('#calculator-preview').html(calculatorSource);
             // And source to copy-paste
             $('#calculatorSource').text(calculatorSource);
+            $('.reveal').fadeIn(500);
+            $('.error').fadeOut();
         }
         catch (e) {
             // Handle errors 
             // Since we don't check for unmatched parens, doubled-up
             // operators, etc.
             
-            $('#calculatorSource').text("");
-            $('#calculator-preview').text("Invalid equation. <sad face>");
-
+            $('.error').fadeIn(100);
+            setTimeout(function(){ $('.error').fadeOut(); }, 1500)
         }
-
-        $('.reveal').fadeIn(500);
 
     }
     $('#generateButton').click(generate);
