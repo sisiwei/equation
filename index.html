@@ -101,7 +101,10 @@
                     $('#result').text(result);
                     $('.result-label').fadeIn();
                 }
-                $('#calculate-button').click(calculate);
-                $('.variable-input').keyup(calculate);
+                $('#calculate-button').click(function(){
+                    calculate();
+                    $('.variable-input').keyup(calculate);
+                });
+                
         </script>
 </html>

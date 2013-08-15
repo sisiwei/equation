@@ -32,8 +32,11 @@
                     $('#result').text(((fahrenheit-32)/1.8).toFixed(1));
                     $('.result-label').fadeIn();
                 }
-                $('#calculate-button').click(calculate);
-                $('.variable-input').keyup(calculate);
+                $('#calculate-button').click(function(){
+                    calculate();
+                    $('.variable-input').keyup(calculate);
+                });
+                
             </script>
     	</div>
     </div>
