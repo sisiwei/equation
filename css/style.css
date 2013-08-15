@@ -89,11 +89,12 @@ textarea {
 }
 
 .maker {
-	width: 420px;
+	width: 325px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 0.9em;
 	color: #C99800;
 	margin: 0 auto;
+	padding: 0 0 0 5px;
 }
 
 .error {
@@ -106,6 +107,7 @@ textarea {
 .rounding {
 	margin: 5px 0 5px 48px;
 	font-size: 0.9em;
+	color: gray;
 }
 
 .rounding input {
@@ -114,14 +116,41 @@ textarea {
 
 #equationInput {
 	width: 233px;
+	padding: 6px 10px;
+	border-radius: 5px;
+	border: 0px;
 }
 
 #calculator-preview {
 	background-color: rgb(37, 37, 37);
 }
+
 #roundPlaces {
     width: 15px;
+	border-radius: 3px;
+	text-align: center;
+	border: 0px;
+	padding: 3px;
+}
 
+#generateButton {
+	padding: 5px 66px;
+	margin: 8px 0px 10px 50px;
+	display: block;
+	background-color: #c99800;
+	color: white;
+	text-align: center;
+	font-weight: 300;
+	font-family: "Roboto Slab", serif;
+	font-size: 13px;
+	border: 1px solid #503E07;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 1px 0px rgba(255,255,255,0.3),1px 1px 0 rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 1px 0px rgba(255,255,255,0.3),1px 1px 0 rgba(0,0,0,0.3);
+	box-shadow: inset 0 1px 0px rgba(255,255,255,0.3),1px 1px 0 rgba(0,0,0,0.3);
+	text-shadow: rgba(0,0,0,0.3) 0px -1px 1px;
 }
 
 footer {
