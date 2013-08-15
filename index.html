@@ -71,22 +71,27 @@
         and an equation
         Like {variables: [x,y,abc_var], equation: "x+y*z"}
     -->
-    
+
     <script type="text/x-handlebars-template" id="calculatorTemplate">
 
-        <div class="equation-container">
-            <h3>Headline here</h3>
-            <p class="guff">Sample guff text explaining the calculator. Optional.</p>
-            <div class="calculator">
-                {{#each variables}}
-                    <div class="var-input-wrapper">
-                        <label>{{this}}:</label> 
-                        <input type="text" placeholder="0" class="variable-input" id="variable-input-{{this}}" />
+        <!-- Delete the next line if you want to use your own CSS styles -->
+        <link rel="stylesheet" type="text/css" href="http://sisiwei.github.io/equation/css/equation.css">
+
+        <div id="calculator-preview">
+            <div class="equation-container">
+                <h3>Headline here</h3>
+                <p class="guff">Sample guff text explaining the calculator. Optional.</p>
+                <div class="calculator">
+                    {{#each variables}}
+                        <div class="var-input-wrapper">
+                            <label>{{this}}:</label> 
+                            <input type="text" placeholder="0" class="variable-input" id="variable-input-{{this}}" />
+                        </div>
+                    {{/each}}
+                    <div class="calc-results cf">
+                        <button id="calculate-button">Calculate</button>
+                        <div class="result-label">Result Label: <span id="result"></span></div>
                     </div>
-                {{/each}}
-                <div class="calc-results cf">
-                    <button id="calculate-button">Calculate</button>
-                    <div class="result-label">Result Label: <span id="result"></span></div>
                 </div>
             </div>
         </div>
