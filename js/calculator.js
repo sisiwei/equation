@@ -61,7 +61,7 @@ $(document).ready(function(){
         try {
             $('#calculator-preview').html(calculatorSource);
             // And source to copy-paste
-            $('#calculatorSource').text(calculatorSource);
+            $('#calculatorSource').val('        <!-- Delete the next line if you do not already have jQuery on your page: -->\n        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>' + calculatorSource);
             $('.reveal').fadeIn(500);
             $('.error').fadeOut();
         }
