@@ -69,9 +69,9 @@ $(document).ready(function(){
             // And source to copy-paste
             $('#calculatorSource').val('\n        <!-- Delete the next line if you already have jQuery on your page: -->\n        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>' + calculatorSource);
             $('.reveal').fadeIn(500);
-            // $(window).animate({
-            //     scrollTop: $('.try').position().top
-            // },500, 'easeOutExpo');
+            $(window).animate({
+                scrollTop: $('.try').position().top
+            },500, 'easeOutExpo');
             $('.error').fadeOut();
         }
         catch (e) {
