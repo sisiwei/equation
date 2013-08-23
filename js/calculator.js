@@ -22,9 +22,10 @@ $(document).ready(function(){
     function getVariables(equation){
         // Variables start with a letter and contain 
         // Letters, numbers and underscores
-        var variables = equation.match(/[A-Za-z][A-Za-z0-9]*/g);
+        var variables = equation.match(/[A-Za-z][A-Za-z0-9_]*/g);
 
         // Include each variable exactly once
+
         return _.uniq(variables);
 
     }
@@ -59,6 +60,11 @@ $(document).ready(function(){
         // Generate an example calculator
 
         try {
+            if (variables.length == 0)
+            {
+                throw Error ();
+            }
+                
             $('#calculator-preview').html(calculatorSource);
             // And source to copy-paste
             $('#calculatorSource').val('\n        <!-- Delete the next line if you already have jQuery on your page: -->\n        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>' + calculatorSource);
