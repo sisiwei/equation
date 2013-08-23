@@ -61,9 +61,11 @@ $(document).ready(function(){
         try {
             $('#calculator-preview').html(calculatorSource);
             // And source to copy-paste
-            $('#calculatorSource').val('\n        <!-- Delete the next line if you do not already have jQuery on your page: -->\n        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>' + calculatorSource);
+            $('#calculatorSource').val('\n        <!-- Delete the next line if you already have jQuery on your page: -->\n        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>' + calculatorSource);
             $('.reveal').fadeIn(500);
-            $(window).scrollTop($('.try').position().top);
+            // $(window).animate({
+            //     scrollTop: $('.try').position().top
+            // },500, 'easeOutExpo');
             $('.error').fadeOut();
         }
         catch (e) {
