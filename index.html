@@ -13,33 +13,53 @@
 <body>
     <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     <h1>equation</h1>
-    <h2 class="tagline">Automatically generate your own calculator.</h2>
+    <h2 class="tagline">Generate your own calculator widget.</h2>
     <hr/>
+    <div class="demo">
+        <h6>Demo</h6>
+        <iframe src="http://sisiwei.github.io/equation/fahrenheit.html" width="460" height="240" frameborder="0"></iframe>
+    </div>
+
+
     <div class="main-container">
         <div class="row cf">
             <div class="left">
+                <h6>Step 1:</h6>
+                Pick a calculation you want to do.
+            </div>
+            <div class="right">
                 <pre>
-<code>result = 500*input1 + 300</code>
+<code>Tip = 0.20 * Total Bill</code>
                 </pre>
             </div>
-            <div class="right">Pick any equation.</div>
+        </div>
+         <div class="row cf">
+            <div class="left">
+                <h6>Step 2:</h6>
+                Figure out what your variables are. Make sure it's all one word.
+            </div>
+            <div class="right">
+                <pre>
+<code>Tip = 0.20 * TotalBill</code>
+                </pre>
+            </div>
         </div>
         <div class="row cf">
-            <div class="left">
+            <div class="left">Add as many variables as you need.</div>
+            <div class="right">
                 <pre>
 <code>result = 500*input1 + input2</code>
                 </pre>
             </div>
-            <div class="right">Add as many variables as you need.</div>
         </div>
         <div class="row cf">
-            <div class="left">
+            <div class="left">Variable names should start with a letter and can contain letters, numbers and _s. And feel free to use parentheses, +, -, * and /.</div>
+            <div class="right">
                 <pre>
 <code>result = 500*input1 + 300*input2 
          + (input3)(input4)</code>
                 </pre>
             </div>
-            <div class="right">Variable names should start with a letter and can contain letters, numbers and _s. And feel free to use parentheses, +, -, * and /.</div>
         </div>
     
         <hr/>
